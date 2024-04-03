@@ -23,8 +23,6 @@ export class JobDetailComponent implements OnInit{
     private sanitizer: DomSanitizer
     ) {}
 
-  jobsUrl = "http://localhost:4200/jobs";
-
   ngOnInit(): void {
     const jobId = this.route.snapshot.paramMap.get('id');
     if (jobId) {
