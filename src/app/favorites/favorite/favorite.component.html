@@ -1,0 +1,22 @@
+<div
+  class="d-flex justify-content-between">
+  <div class="d-flex">
+    <span class="">
+      <img
+        [src]="job.companyLogo"
+        alt="{{ job.companyName }}"
+        class="img-responsive"
+        style="max-height: 50px;">
+    </span>
+    <div class="">
+      <a style="cursor: pointer;"
+      [routerLink]="['/jobs', job.id]"
+      class="list-group-item-heading">{{ job.title }}</a>
+      <div>
+        <span>Company: {{ job.companyName }}</span>
+        <span>Reference: {{ job.reference }}</span>
+      </div>
+      
+    </div>
+  </div>
+</div>

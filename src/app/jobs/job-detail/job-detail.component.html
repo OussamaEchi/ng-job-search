@@ -1,0 +1,30 @@
+<div *ngIf="job" class="container">
+  <div class="row">
+    <div class="col-12">
+      <button style="background-color: white; color: black;" (click)="navigateToJobs()">Back</button>
+      <div class="d-flex">
+        <span class="">
+          <img
+            [src]="job.companyLogo"
+            [alt]="job.companyName"
+            class="img-responsive"
+            style="max-height: 50px;">
+        </span>
+        <div>
+          <h2 class="list-group-item-heading">{{ job.companyName }} - {{ job.title }}</h2>
+          <span>{{ job.industries }}</span>
+          <span>{{ job.types }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <p><strong>Publish date: </strong> {{ job.publishDate }}</p>
+      <p><strong>Location: </strong> {{ job.location }}</p>
+      <p><strong>Reference: </strong> {{ job.reference }}</p>
+      <p><strong>Description: </strong> </p>
+      <span [innerHTML]="sanitize(job.description)"></span>
+    </div>
+  </div>
+</div>
