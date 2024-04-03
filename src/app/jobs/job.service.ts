@@ -19,7 +19,7 @@ interface Job{
 
 export class JobService {
   jobs: Job[] = [];
-  jobsUrl = window.location.href + "/jobs";
+  jobsUrl = window.location.origin + "/jobs";
 
   constructor(private http: HttpClient, private favorites: FavoritesService) { }
 
