@@ -19,7 +19,7 @@ interface Job{
 
 export class JobService {
   jobs: Job[] = [];
-  jobsUrl = "https://ng-job-search-ten.vercel.app/jobs";
+  jobsUrl = window.location.href + "/jobs";
 
   constructor(private http: HttpClient, private favorites: FavoritesService) { }
 
